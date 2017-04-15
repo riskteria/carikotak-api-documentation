@@ -263,6 +263,23 @@
   -h <span class="s2">"Accept        : application/json"</span>
      <span class="s2">"X-CSRF-TOKEN  : csrf_token
 </span></code></pre>
+<blockquote>
+<p>Success Response</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code><span class="o">{</span>
+  <span class="s2">"status"</span>: <span class="s2">"created"</span>,
+  <span class="s2">"message"</span>: <span class="s2">"account has been created"</span>,
+  <span class="s2">"url"</span>: <span class="s2">"http://carikotak.com"</span>
+<span class="o">}</span>
+</code></pre>
+<blockquote>
+<p>Failed Response</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code><span class="o">{</span>
+  <span class="s2">"status"</span>: <span class="s2">"failed"</span>
+  <span class="s2">"message"</span>: <span class="s2">"account cannot be created"</span>
+<span class="o">}</span>
+</code></pre>
 <p>This endpoint to register new user</p>
 
 <h3 id="http-request">HTTP REQUEST</h3>
@@ -294,6 +311,42 @@
 <td>User password</td>
 </tr>
 </tbody></table>
+
+<h2 id="login-to-account">Login to account</h2>
+
+<blockquote>
+<p>Sample Request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://carikotak.com/login"</span>
+  -X <span class="s2">"POST"</span>
+</code></pre>
+<blockquote>
+<p>Success Response</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code><span class="o">{</span>
+  <span class="s2">"status"</span>: <span class="s2">"logged"</span>,
+  <span class="s2">"message"</span>: <span class="s2">"login sucess"</span>,
+  <span class="s2">"url"</span>: <span class="s2">"http://carikotak.com"</span>
+<span class="o">}</span>
+</code></pre>
+<blockquote>
+<p>Failed Response</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code><span class="o">{</span>
+  <span class="s2">"status"</span>: <span class="s2">"unauthorized"</span>
+<span class="o">}</span>
+</code></pre>
+<p>This endpoint to loggin to existing user account</p>
+
+<h3 id="http-request">HTTP REQUEST</h3>
+
+<p>`POST http://carikotak.com/login</p>
+
+<h3 id="parameters">PARAMETERS</h3>
+
+<p>&mdash;&mdash;&mdash; | &mdash;&mdash;- | &mdash;&mdash;&mdash;&ndash;
+email | required | User email address
+password | required | User password</p>
 
 <h2 id="get-api-token">Get API token</h2>
 
