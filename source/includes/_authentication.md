@@ -13,6 +13,25 @@ curl "https://carikotak.com/register"
      "X-CSRF-TOKEN  : csrf_token
 ```
 
+> Success Response
+
+```shell
+{
+  "status": "created",
+  "message": "account has been created",
+  "url": "http://carikotak.com"
+}
+```
+
+> Failed Response
+
+```shell
+{
+  "status": "failed"
+  "message": "account cannot be created"
+}
+```
+
 This endpoint to register new user
 
 ### HTTP REQUEST
@@ -22,6 +41,43 @@ This endpoint to register new user
 Parameter |  | Description
 --------- | ------- | -----------
 name | required | User name
+email | required | User email address
+password | required | User password
+
+## Login to account
+
+> Sample Request
+
+```shell
+curl "https://carikotak.com/login"
+  -X "POST"
+```
+
+> Success Response
+
+```shell
+{
+  "status": "logged",
+  "message": "login sucess",
+  "url": "http://carikotak.com"
+}
+```
+
+> Failed Response
+
+```shell
+{
+  "status": "unauthorized"
+}
+```
+
+This endpoint to loggin to existing user account
+
+### HTTP REQUEST
+`POST http://carikotak.com/login
+
+### PARAMETERS
+--------- | ------- | -----------
 email | required | User email address
 password | required | User password
 
