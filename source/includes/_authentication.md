@@ -77,6 +77,7 @@ This endpoint to loggin to existing user account
 `POST http://carikotak.com/login
 
 ### PARAMETERS
+Parameter |   | Description
 --------- | ------- | -----------
 email | required | User email address
 password | required | User password
