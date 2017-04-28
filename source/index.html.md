@@ -12,7 +12,13 @@ includes:
   - installation
   - authentication
   - errors
-  - kitten
+  - product
+  - post
+  - user
+  - profile
+  - product_categories
+  - post_categories
+
 
 search: true
 ---
