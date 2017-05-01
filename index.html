@@ -260,9 +260,7 @@
 </blockquote>
 <pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://carikotak.com/register"</span>
   -X <span class="s2">"POST"</span>
-  -h <span class="s2">"Accept        : application/json"</span>
-     <span class="s2">"X-CSRF-TOKEN  : csrf_token
-</span></code></pre>
+</code></pre>
 <blockquote>
 <p>Success Response</p>
 </blockquote>
@@ -489,22 +487,366 @@
 
 <h2 id="get-all-products">Get All Products</h2>
 
+<blockquote>
+<p>Sample Request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://carikotak.com/product"</span>
+  -X <span class="s2">"GET"</span>
+</code></pre>
 <h2 id="get-a-specific-product">Get a Specific Product</h2>
 
+<blockquote>
+<p>Sample Request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://carikotak.com/product/{slug}"</span>
+  -X <span class="s2">"GET"</span>
+</code></pre>
 <h2 id="store-a-new-product">Store a New Product</h2>
+
+<blockquote>
+<p>Sample Request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://carikotak.com/product/create"</span>
+  -X <span class="s2">"POST"</span>
+</code></pre>
+<blockquote>
+<p>Success Response</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code><span class="o">{</span>
+    <span class="s2">"status"</span>: <span class="s2">"ok"</span>,
+    <span class="s2">"message"</span>: <span class="s2">"product has been added"</span>,
+    <span class="s2">"product"</span>: <span class="s2">"{object}"</span>
+<span class="o">}</span>
+</code></pre>
+<blockquote>
+<p>Fail Response</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code><span class="o">{</span>
+    <span class="s1">'status'</span>: <span class="s1">'error'</span>,
+    <span class="s1">'message'</span>: <span class="s1">'product cannot be added'</span>
+<span class="o">}</span>
+</code></pre>
+<h3 id="http-request">HTTP REQUEST</h3>
+
+<p><code class="prettyprint">POST http://carikotak.com/product/create</code></p>
+
+<h3 id="parameters">PARAMETERS</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th></th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>name</td>
+<td>required</td>
+<td>Product name</td>
+</tr>
+<tr>
+<td>price</td>
+<td>required</td>
+<td>Product price</td>
+</tr>
+<tr>
+<td>category_id</td>
+<td>required</td>
+<td>Product Category</td>
+</tr>
+<tr>
+<td>material</td>
+<td>optional</td>
+<td>Product material</td>
+</tr>
+<tr>
+<td>color</td>
+<td>optional</td>
+<td>Product color</td>
+</tr>
+<tr>
+<td>image</td>
+<td>optional</td>
+<td>Product image</td>
+</tr>
+<tr>
+<td>description</td>
+<td>required</td>
+<td>Product description</td>
+</tr>
+<tr>
+<td>type</td>
+<td>required</td>
+<td>Product type</td>
+</tr>
+</tbody></table>
 
 <h2 id="update-existing-product">Update Existing Product</h2>
 
+<blockquote>
+<p>Sample Request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://carikotak.com/product/{id}"</span>
+  -X <span class="s2">"PUT"</span>
+</code></pre>
+<blockquote>
+<p>Success Response</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code><span class="o">{</span>
+    <span class="s2">"status"</span>: <span class="s2">"ok"</span>,
+    <span class="s2">"message"</span>: <span class="s2">"product has been updated"</span>,
+    <span class="s2">"product"</span>: <span class="s2">"{object}"</span>
+<span class="o">}</span>
+</code></pre>
+<blockquote>
+<p>Fail Response</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code><span class="o">{</span>
+    <span class="s1">'status'</span>: <span class="s1">'error'</span>,
+    <span class="s1">'message'</span>: <span class="s1">'product cannot be updated'</span>
+<span class="o">}</span>
+</code></pre>
+<h3 id="http-request">HTTP REQUEST</h3>
+
+<p><code class="prettyprint">PUT http://carikotak.com/product/{id}</code></p>
+
+<h3 id="parameters">PARAMETERS</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th></th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>name</td>
+<td>required</td>
+<td>Product name</td>
+</tr>
+<tr>
+<td>price</td>
+<td>required</td>
+<td>Product price</td>
+</tr>
+<tr>
+<td>category_id</td>
+<td>required</td>
+<td>Product Category</td>
+</tr>
+<tr>
+<td>material</td>
+<td>optional</td>
+<td>Product material</td>
+</tr>
+<tr>
+<td>color</td>
+<td>optional</td>
+<td>Product color</td>
+</tr>
+<tr>
+<td>image</td>
+<td>optional</td>
+<td>Product image</td>
+</tr>
+<tr>
+<td>description</td>
+<td>required</td>
+<td>Product description</td>
+</tr>
+<tr>
+<td>type</td>
+<td>required</td>
+<td>Product type</td>
+</tr>
+</tbody></table>
+
+<h2 id="remove-product">Remove Product</h2>
+
+<blockquote>
+<p>Sample Request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://carikotak.com/product/{id}"</span>
+  -X <span class="s2">"DELETE"</span>
+</code></pre>
+<blockquote>
+<p>Success Response</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code><span class="o">{</span>
+    <span class="s1">'status'</span>: <span class="s1">'ok'</span>,
+    <span class="s1">'message'</span>: <span class="s1">'product deleted successfully'</span>
+<span class="o">}</span>
+</code></pre>
+<blockquote>
+<p>Fail Response</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code><span class="o">{</span>
+    <span class="s1">'status'</span>: <span class="s1">'error'</span>,
+    <span class="s1">'message'</span>: <span class="s1">'product cannot be deleted'</span>
+<span class="o">}</span>
+</code></pre>
           <h1 id="post">Post</h1>
 
 <h2 id="get-all-posts">Get All Posts</h2>
 
+<blockquote>
+<p>Sample Request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://carikotak.com/post"</span>
+  -X <span class="s2">"GET"</span>
+</code></pre>
 <h2 id="get-a-specific-post">Get a Specific Post</h2>
 
+<blockquote>
+<p>Sample Request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://carikotak.com/product/{slug}"</span>
+  -X <span class="s2">"GET"</span>
+</code></pre>
 <h2 id="store-a-new-post">Store a new Post</h2>
+
+<blockquote>
+<p>Sample Request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://carikotak.com/post/{id}"</span>
+  -X <span class="s2">"PUT"</span>
+</code></pre>
+<blockquote>
+<p>Success Response</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code><span class="o">{</span>
+    <span class="s2">"status"</span>: <span class="s2">"ok"</span>,
+    <span class="s2">"message"</span>: <span class="s2">"post has been added"</span>,
+    <span class="s2">"product"</span>: <span class="s2">"{object}"</span>
+<span class="o">}</span>
+</code></pre>
+<blockquote>
+<p>Fail Response</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code><span class="o">{</span>
+    <span class="s1">'status'</span>: <span class="s1">'error'</span>,
+    <span class="s1">'message'</span>: <span class="s1">'post cannot be added'</span>
+<span class="o">}</span>
+</code></pre>
+<h3 id="http-request">HTTP REQUEST</h3>
+
+<p>PUT http://carikotak.com/post/{id}`</p>
+
+<h3 id="parameters">PARAMETERS</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th></th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>category_id</td>
+<td>required</td>
+<td>Post Category</td>
+</tr>
+<tr>
+<td>title</td>
+<td>required</td>
+<td>Post title</td>
+</tr>
+<tr>
+<td>body</td>
+<td>required</td>
+<td>Post body</td>
+</tr>
+<tr>
+<td>image</td>
+<td>optional</td>
+<td>Product image</td>
+</tr>
+</tbody></table>
 
 <h2 id="update-existing-post">Update Existing Post</h2>
 
+<blockquote>
+<p>Sample Request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://carikotak.com/post/create"</span>
+  -X <span class="s2">"POST"</span>
+</code></pre>
+<blockquote>
+<p>Success Response</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code><span class="o">{</span>
+    <span class="s2">"status"</span>: <span class="s2">"ok"</span>,
+    <span class="s2">"message"</span>: <span class="s2">"post has been added"</span>,
+    <span class="s2">"product"</span>: <span class="s2">"{object}"</span>
+<span class="o">}</span>
+</code></pre>
+<blockquote>
+<p>Fail Response</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code><span class="o">{</span>
+    <span class="s1">'status'</span>: <span class="s1">'error'</span>,
+    <span class="s1">'message'</span>: <span class="s1">'post cannot be added'</span>
+<span class="o">}</span>
+</code></pre>
+<h3 id="http-request">HTTP REQUEST</h3>
+
+<p><code class="prettyprint">POST http://carikotak.com/post/create</code></p>
+
+<h3 id="parameters">PARAMETERS</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th></th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>category_id</td>
+<td>required</td>
+<td>Post Category</td>
+</tr>
+<tr>
+<td>title</td>
+<td>required</td>
+<td>Post title</td>
+</tr>
+<tr>
+<td>body</td>
+<td>required</td>
+<td>Post body</td>
+</tr>
+<tr>
+<td>image</td>
+<td>optional</td>
+<td>Product image</td>
+</tr>
+</tbody></table>
+
+<h2 id="remove-product">Remove Product</h2>
+
+<blockquote>
+<p>Sample Request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://carikotak.com/post/{id}"</span>
+  -X <span class="s2">"DELETE"</span>
+</code></pre>
+<blockquote>
+<p>Success Response</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code><span class="o">{</span>
+    <span class="s1">'status'</span>: <span class="s1">'ok'</span>,
+    <span class="s1">'message'</span>: <span class="s1">'post deleted successfully'</span>
+<span class="o">}</span>
+</code></pre>
+<blockquote>
+<p>Fail Response</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code><span class="o">{</span>
+    <span class="s1">'status'</span>: <span class="s1">'error'</span>,
+    <span class="s1">'message'</span>: <span class="s1">'post cannot be deleted'</span>
+<span class="o">}</span>
+</code></pre>
           <h1 id="user">User</h1>
 
 <h2 id="get-all-users">Get All Users</h2>
