@@ -9,8 +9,6 @@ Carikotak use API `token` to allow access for required authentication’s resour
 ```shell
 curl "https://carikotak.com/register"
   -X "POST"
-  -h "Accept        : application/json"
-     "X-CSRF-TOKEN  : csrf_token
 ```
 
 > Success Response
