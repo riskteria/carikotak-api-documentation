@@ -369,8 +369,10 @@
 <pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://carikotak.com/oauth/token"</span>
   -X <span class="s2">"POST"</span>
   -h <span class="s2">"Accept        : application/json"</span>
-     <span class="s2">"X-CSRF-TOKEN  : csrf_token
-</span></code></pre>
+     <span class="s2">"X-CSRF-TOKEN  : csrf_token"</span>
+     <span class="s2">"x-Requested-With: XMLHttpRequest"</span>
+     <span class="s2">"cache-control : no-cache"</span>
+</code></pre>
 <blockquote>
 <p>Success Response</p>
 </blockquote>
@@ -423,9 +425,72 @@
 </tr>
 </tbody></table>
 
-<h2 id="facebook-login">Facebook Login</h2>
+<h2 id="social-auth">Social Auth</h2>
 
-<h2 id="google-login">Google Login</h2>
+<p>Login with Google or Facebook account</p>
+
+<blockquote>
+<p>Sample Request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>
+curl <span class="s2">"https://carikotak.com/social"</span>
+-X <span class="s2">"POST"</span>
+-h <span class="s2">"Accept        : application/json"</span>
+    <span class="s2">"X-CSRF-TOKEN  : csrf_token"</span>
+    <span class="s2">"x-Requested-With: XMLHttpRequest"</span>
+    <span class="s2">"cache-control : no-cache"</span>
+
+</code></pre>
+<blockquote>
+<p>Success Response</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code><span class="o">{</span>
+  <span class="s2">"status"</span>: <span class="s2">"ok"</span>,
+  <span class="s2">"message"</span>: <span class="s2">"login success"</span>,
+  <span class="s2">"url"</span>: <span class="s2">"/"</span>
+<span class="o">}</span>
+</code></pre>
+<p>This endpoint is used to authenticated with Facebook or Google Account</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">POST https://carikotak.com/social</code></p>
+
+<h3 id="parameters">Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th></th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>name</td>
+<td>required</td>
+<td>Account name</td>
+</tr>
+<tr>
+<td>email</td>
+<td>required</td>
+<td>Account email</td>
+</tr>
+<tr>
+<td>provider</td>
+<td>required</td>
+<td>&lsquo;facebook&rsquo; or &lsquo;google&rsquo;</td>
+</tr>
+<tr>
+<td>social_id</td>
+<td>required</td>
+<td>Account ID</td>
+</tr>
+<tr>
+<td>avatar</td>
+<td>optional</td>
+<td>Account Profile Picture</td>
+</tr>
+</tbody></table>
 
           <h1 id="errors">Errors</h1>
 
