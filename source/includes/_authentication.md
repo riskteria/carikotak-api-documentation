@@ -88,7 +88,9 @@ password | required | User password
 curl "https://carikotak.com/oauth/token"
   -X "POST"
   -h "Accept        : application/json"
-     "X-CSRF-TOKEN  : csrf_token
+     "X-CSRF-TOKEN  : csrf_token"
+     "x-Requested-With: XMLHttpRequest"
+     "cache-control : no-cache"
 ```
 
 > Success Response
@@ -116,8 +118,45 @@ grant_type | required | 'password'
 email | required | User email address
 password | required | User password
 
-## Facebook Login
+## Social Auth
 
-## Google Login
+Login with Google or Facebook account
 
+> Sample Request
 
+```shell
+
+curl "https://carikotak.com/social"
+-X "POST"
+-h "Accept        : application/json"
+    "X-CSRF-TOKEN  : csrf_token"
+    "x-Requested-With: XMLHttpRequest"
+    "cache-control : no-cache"
+
+```
+
+> Success Response
+
+```shell
+{
+  "status": "ok",
+  "message": "login success",
+  "url": "/"
+}
+```
+
+This endpoint is used to authenticated with Facebook or Google Account
+
+### HTTP Request
+
+`POST https://carikotak.com/social`
+
+### Parameters
+
+Parameter |  | Description
+--------- | ------- | -----------
+name  | required  | Account name
+email | required  | Account email
+provider  | required | 'facebook' or 'google'
+social_id | required | Account ID
+avatar  | optional | Account Profile Picture
