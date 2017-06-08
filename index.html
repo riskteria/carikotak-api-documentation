@@ -280,11 +280,11 @@
 </code></pre>
 <p>This endpoint to register new user</p>
 
-<h3 id="http-request">HTTP REQUEST</h3>
+<h4 id="http-request">HTTP REQUEST</h4>
 
 <p><code class="prettyprint">POST http://carikotak.com/register</code></p>
 
-<h3 id="parameters">PARAMETERS</h3>
+<h4 id="parameters">PARAMETERS</h4>
 
 <table><thead>
 <tr>
@@ -336,11 +336,11 @@
 </code></pre>
 <p>This endpoint to loggin to existing user account</p>
 
-<h3 id="http-request">HTTP REQUEST</h3>
+<h4 id="http-request">HTTP REQUEST</h4>
 
 <p>`POST http://carikotak.com/login</p>
 
-<h3 id="parameters">PARAMETERS</h3>
+<h4 id="parameters">PARAMETERS</h4>
 
 <table><thead>
 <tr>
@@ -385,11 +385,11 @@
 </code></pre>
 <p>This endpoint to get API token</p>
 
-<h3 id="http-request">HTTP REQUEST</h3>
+<h4 id="http-request">HTTP REQUEST</h4>
 
 <p><code class="prettyprint">POST http://carikotak.com/oauth/token</code></p>
 
-<h3 id="parameters">PARAMETERS</h3>
+<h4 id="parameters">PARAMETERS</h4>
 
 <table><thead>
 <tr>
@@ -452,11 +452,11 @@ curl <span class="s2">"https://carikotak.com/social"</span>
 </code></pre>
 <p>This endpoint is used to authenticated with Facebook or Google Account</p>
 
-<h3 id="http-request">HTTP Request</h3>
+<h4 id="http-request">HTTP Request</h4>
 
 <p><code class="prettyprint">POST https://carikotak.com/social</code></p>
 
-<h3 id="parameters">Parameters</h3>
+<h4 id="parameters">Parameters</h4>
 
 <table><thead>
 <tr>
@@ -558,7 +558,7 @@ curl <span class="s2">"https://carikotak.com/social"</span>
 <pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://carikotak.com/api/product"</span>
   -X <span class="s2">"GET"</span>
 </code></pre>
-<h3 id="http-request">HTTP REQUEST</h3>
+<h4 id="http-request">HTTP REQUEST</h4>
 
 <ul>
 <li><code class="prettyprint">GET https://carikotak.com/api/product</code></li>
@@ -566,7 +566,7 @@ curl <span class="s2">"https://carikotak.com/social"</span>
 <li><code class="prettyprint">GET https://carikotak.com/api/product?page=1&amp;per_page=10</code></li>
 </ul>
 
-<h3 id="queries">QUERIES</h3>
+<h4 id="queries">QUERIES</h4>
 
 <table><thead>
 <tr>
@@ -592,7 +592,7 @@ curl <span class="s2">"https://carikotak.com/social"</span>
 </tr>
 </tbody></table>
 
-<h2 id="get-a-specific-product">Get a Specific Product</h2>
+<h2 id="read-product">Read Product</h2>
 
 <blockquote>
 <p>Sample Request</p>
@@ -600,11 +600,11 @@ curl <span class="s2">"https://carikotak.com/social"</span>
 <pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://carikotak.com/api/product/show-me-your-product"</span>
   -X <span class="s2">"GET"</span>
 </code></pre>
-<h3 id="http-request">HTTP REQUEST</h3>
+<h4 id="http-request">HTTP REQUEST</h4>
 
 <p><code class="prettyprint">GET https://carikotak.com/api/product/{slug}</code></p>
 
-<h2 id="store-a-new-product">Store a New Product</h2>
+<h2 id="store-product">Store Product</h2>
 
 <blockquote>
 <p>Sample Request</p>
@@ -629,11 +629,11 @@ curl <span class="s2">"https://carikotak.com/social"</span>
     <span class="s1">'message'</span>: <span class="s1">'product cannot be added'</span>
 <span class="o">}</span>
 </code></pre>
-<h3 id="http-request">HTTP REQUEST</h3>
+<h4 id="http-request">HTTP REQUEST</h4>
 
 <p><code class="prettyprint">POST https://carikotak.com/api/product</code></p>
 
-<h3 id="parameters">PARAMETERS</h3>
+<h4 id="parameters">PARAMETERS</h4>
 
 <table><thead>
 <tr>
@@ -684,7 +684,7 @@ curl <span class="s2">"https://carikotak.com/social"</span>
 </tr>
 </tbody></table>
 
-<h2 id="update-existing-product">Update Existing Product</h2>
+<h2 id="update-product">Update Product</h2>
 
 <blockquote>
 <p>Sample Request</p>
@@ -709,11 +709,11 @@ curl <span class="s2">"https://carikotak.com/social"</span>
     <span class="s1">'message'</span>: <span class="s1">'product cannot be updated'</span>
 <span class="o">}</span>
 </code></pre>
-<h3 id="http-request">HTTP REQUEST</h3>
+<h4 id="http-request">HTTP REQUEST</h4>
 
 <p><code class="prettyprint">PUT http://carikotak.com/api/product/{id}</code></p>
 
-<h3 id="parameters">PARAMETERS</h3>
+<h4 id="parameters">PARAMETERS</h4>
 
 <table><thead>
 <tr>
@@ -788,13 +788,13 @@ curl <span class="s2">"https://carikotak.com/social"</span>
     <span class="s1">'message'</span>: <span class="s1">'product cannot be deleted'</span>
 <span class="o">}</span>
 </code></pre>
-<h3 id="http-request">HTTP REQUEST</h3>
+<h4 id="http-request">HTTP REQUEST</h4>
 
 <p><code class="prettyprint">DELETE https://carikotak.com/api/product/{productId}</code></p>
 
           <h1 id="post">Post</h1>
 
-<h2 id="get-all-posts">Get All Posts</h2>
+<h2 id="post-list">Post List</h2>
 
 <blockquote>
 <p>Sample Request</p>
@@ -802,7 +802,7 @@ curl <span class="s2">"https://carikotak.com/social"</span>
 <pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://carikotak.com/api/post?page=1&amp;per_page=10"</span>
   -X <span class="s2">"GET"</span>
 </code></pre>
-<h3 id="http-request">HTTP REQUEST</h3>
+<h4 id="http-request">HTTP REQUEST</h4>
 
 <ul>
 <li><code class="prettyprint">GET https://carikotak.com/api/post</code></li>
@@ -810,7 +810,7 @@ curl <span class="s2">"https://carikotak.com/social"</span>
 <li><code class="prettyprint">GET https://carikotak.com/api/post?page=1&amp;per_page=10</code></li>
 </ul>
 
-<h3 id="queries">QUERIES</h3>
+<h4 id="queries">QUERIES</h4>
 
 <table><thead>
 <tr>
@@ -836,7 +836,7 @@ curl <span class="s2">"https://carikotak.com/social"</span>
 </tr>
 </tbody></table>
 
-<h2 id="get-a-specific-post">Get a Specific Post</h2>
+<h2 id="read-post">Read Post</h2>
 
 <blockquote>
 <p>Sample Request</p>
@@ -844,11 +844,11 @@ curl <span class="s2">"https://carikotak.com/social"</span>
 <pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://carikotak.com/api/post/this-is-a-sample-post"</span>
   -X <span class="s2">"GET"</span>
 </code></pre>
-<h3 id="http-request">HTTP REQUEST</h3>
+<h4 id="http-request">HTTP REQUEST</h4>
 
 <p><code class="prettyprint">GET https://carikotak.com/api/post/{slug}</code></p>
 
-<h2 id="store-a-new-post">Store a new Post</h2>
+<h2 id="create-post">Create Post</h2>
 
 <blockquote>
 <p>Sample Request</p>
@@ -873,11 +873,11 @@ curl <span class="s2">"https://carikotak.com/social"</span>
     <span class="s1">'message'</span>: <span class="s1">'post cannot be added'</span>
 <span class="o">}</span>
 </code></pre>
-<h3 id="http-request">HTTP REQUEST</h3>
+<h4 id="http-request">HTTP REQUEST</h4>
 
 <p><code class="prettyprint">POST http://carikotak.com/api/post/</code></p>
 
-<h3 id="parameters">PARAMETERS</h3>
+<h4 id="parameters">PARAMETERS</h4>
 
 <table><thead>
 <tr>
@@ -908,7 +908,7 @@ curl <span class="s2">"https://carikotak.com/social"</span>
 </tr>
 </tbody></table>
 
-<h2 id="update-existing-post">Update Existing Post</h2>
+<h2 id="update-post">Update Post</h2>
 
 <blockquote>
 <p>Sample Request</p>
@@ -933,11 +933,11 @@ curl <span class="s2">"https://carikotak.com/social"</span>
     <span class="s1">'message'</span>: <span class="s1">'post cannot be updated'</span>
 <span class="o">}</span>
 </code></pre>
-<h3 id="http-request">HTTP REQUEST</h3>
+<h4 id="http-request">HTTP REQUEST</h4>
 
 <p><code class="prettyprint">PUT http://carikotak.com/post/1</code></p>
 
-<h3 id="parameters">PARAMETERS</h3>
+<h4 id="parameters">PARAMETERS</h4>
 
 <table><thead>
 <tr>
@@ -992,7 +992,7 @@ curl <span class="s2">"https://carikotak.com/social"</span>
     <span class="s1">'message'</span>: <span class="s1">'post cannot be deleted'</span>
 <span class="o">}</span>
 </code></pre>
-<h3 id="http-request">HTTP REQUEST</h3>
+<h4 id="http-request">HTTP REQUEST</h4>
 
 <p><code class="prettyprint">DELETE https://carikotak.com/api/post/{postId}</code></p>
 
@@ -1001,12 +1001,6 @@ curl <span class="s2">"https://carikotak.com/social"</span>
 <h2 id="get-all-users">Get All Users</h2>
 
 <h2 id="get-a-specific-user">Get a Specific User</h2>
-
-          <h1 id="profile">Profile</h1>
-
-<h2 id="get-current-user-profile">Get Current User Profile</h2>
-
-<h2 id="get-a-users-profile">Get a User&rsquo;s Profile</h2>
 
           <h1 id="product-categories">Product Categories</h1>
 
