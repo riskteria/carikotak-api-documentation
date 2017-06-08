@@ -1,29 +1,46 @@
 # Product
 
-## Get All Products
+## Product List
 
 > Sample Request
 
 ```shell
-curl "https://carikotak.com/product"
+curl "https://carikotak.com/api/product"
   -X "GET"
 ```
+
+### HTTP REQUEST
+- `GET https://carikotak.com/api/product`
+- `GET https://carikotak.com/api/product?user={userId}`
+- `GET https://carikotak.com/api/product?page=1&per_page=10`
+
+### QUERIES
+Query   | Type  | Description
+--------| ----- | -----------
+user    | optional  | Get product list from user
+page    | optional  | Pagination page, default 0
+per_page | optional | Number of results per page, default 10
+
 
 ## Get a Specific Product
 
 > Sample Request
 
 ```shell
-curl "https://carikotak.com/product/{slug}"
+curl "https://carikotak.com/api/product/show-me-your-product"
   -X "GET"
 ```
+
+### HTTP REQUEST
+`GET https://carikotak.com/api/product/{slug}`
+
 
 ## Store a New Product
 
 > Sample Request
 
 ```shell
-curl "https://carikotak.com/product/create"
+curl "https://carikotak.com/api/product/"
   -X "POST"
 ```
 
@@ -47,7 +64,7 @@ curl "https://carikotak.com/product/create"
 ```
 
 ### HTTP REQUEST
-`POST http://carikotak.com/product/create`
+`POST https://carikotak.com/api/product`
 
 ### PARAMETERS
 Parameter |  | Description
@@ -66,7 +83,7 @@ type | required | Product type
 > Sample Request
 
 ```shell
-curl "https://carikotak.com/product/{id}"
+curl "https://carikotak.com/product/1"
   -X "PUT"
 ```
 
@@ -90,7 +107,7 @@ curl "https://carikotak.com/product/{id}"
 ```
 
 ### HTTP REQUEST
-`PUT http://carikotak.com/product/{id}`
+`PUT http://carikotak.com/api/product/{id}`
 
 ### PARAMETERS
 Parameter |  | Description
@@ -109,7 +126,7 @@ type | required | Product type
 > Sample Request
 
 ```shell
-curl "https://carikotak.com/product/{id}"
+curl "https://carikotak.com/product/1"
   -X "DELETE"
 ```
 
@@ -129,4 +146,7 @@ curl "https://carikotak.com/product/{id}"
     'status': 'error',
     'message': 'product cannot be deleted'
 }
-```
+``` 
+
+### HTTP REQUEST
+`DELETE https://carikotak.com/api/product/{productId}`
