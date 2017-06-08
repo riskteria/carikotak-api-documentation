@@ -1,6 +1,6 @@
 # Post
 
-## Get All Posts
+## Post List
 
 > Sample Request
 
@@ -9,19 +9,19 @@ curl "https://carikotak.com/api/post?page=1&per_page=10"
   -X "GET"
 ```
 
-### HTTP REQUEST
+#### HTTP REQUEST
 - `GET https://carikotak.com/api/post`
 - `GET https://carikotak.com/api/post?user={userId}`
 - `GET https://carikotak.com/api/post?page=1&per_page=10`
 
-### QUERIES
+#### QUERIES
 Query   | Type  | Description
 --------| ----- | -----------
 user    | optional  | Get post list from user
 page    | optional  | Pagination page, default 0
 per_page | optional | Number of results per page, default 10
 
-## Get a Specific Post
+## Read Post
 
 > Sample Request
 
@@ -30,10 +30,10 @@ curl "https://carikotak.com/api/post/this-is-a-sample-post"
   -X "GET"
 ```
 
-### HTTP REQUEST
+#### HTTP REQUEST
 `GET https://carikotak.com/api/post/{slug}`
 
-## Store a new Post
+## Create Post
 
 > Sample Request
 
@@ -61,10 +61,10 @@ curl "https://carikotak.com/api/post"
 }
 ```
 
-### HTTP REQUEST
+#### HTTP REQUEST
 `POST http://carikotak.com/api/post/`
 
-### PARAMETERS
+#### PARAMETERS
 Parameter |  | Description
 --------- | ------- | -----------
 category_id | required | Post Category
@@ -72,7 +72,7 @@ title | required | Post title
 body | required | Post body
 image | optional | Product image
 
-## Update Existing Post
+## Update Post
 
 > Sample Request
 
@@ -100,10 +100,10 @@ curl "https://carikotak.com/api/post/{postId}"
 }
 ```
 
-### HTTP REQUEST
+#### HTTP REQUEST
 `PUT http://carikotak.com/post/1`
 
-### PARAMETERS
+#### PARAMETERS
 Parameter |  | Description
 --------- | ------- | -----------
 category_id | required | Post Category
@@ -138,5 +138,5 @@ curl "https://carikotak.com/api/post/{postId}"
 }
 ```
 
-### HTTP REQUEST
+#### HTTP REQUEST
 `DELETE https://carikotak.com/api/post/{postId}`

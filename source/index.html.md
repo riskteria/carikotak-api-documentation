@@ -15,7 +15,6 @@ includes:
   - product
   - post
   - user
-  - profile
   - product_categories
   - post_categories
 

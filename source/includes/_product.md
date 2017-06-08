@@ -9,12 +9,12 @@ curl "https://carikotak.com/api/product"
   -X "GET"
 ```
 
-### HTTP REQUEST
+#### HTTP REQUEST
 - `GET https://carikotak.com/api/product`
 - `GET https://carikotak.com/api/product?user={userId}`
 - `GET https://carikotak.com/api/product?page=1&per_page=10`
 
-### QUERIES
+#### QUERIES
 Query   | Type  | Description
 --------| ----- | -----------
 user    | optional  | Get product list from user
@@ -22,7 +22,7 @@ page    | optional  | Pagination page, default 0
 per_page | optional | Number of results per page, default 10
 
 
-## Get a Specific Product
+## Read Product
 
 > Sample Request
 
@@ -31,11 +31,11 @@ curl "https://carikotak.com/api/product/show-me-your-product"
   -X "GET"
 ```
 
-### HTTP REQUEST
+#### HTTP REQUEST
 `GET https://carikotak.com/api/product/{slug}`
 
 
-## Store a New Product
+## Store Product
 
 > Sample Request
 
@@ -63,10 +63,10 @@ curl "https://carikotak.com/api/product/"
 }
 ```
 
-### HTTP REQUEST
+#### HTTP REQUEST
 `POST https://carikotak.com/api/product`
 
-### PARAMETERS
+#### PARAMETERS
 Parameter |  | Description
 --------- | ------- | -----------
 name | required | Product name
@@ -78,7 +78,7 @@ image | optional | Product image
 description | required | Product description
 type | required | Product type
 
-## Update Existing Product
+## Update Product
 
 > Sample Request
 
@@ -106,10 +106,10 @@ curl "https://carikotak.com/product/1"
 }
 ```
 
-### HTTP REQUEST
+#### HTTP REQUEST
 `PUT http://carikotak.com/api/product/{id}`
 
-### PARAMETERS
+#### PARAMETERS
 Parameter |  | Description
 --------- | ------- | -----------
 name | required | Product name
@@ -148,5 +148,5 @@ curl "https://carikotak.com/product/1"
 }
 ``` 
 
-### HTTP REQUEST
+#### HTTP REQUEST
 `DELETE https://carikotak.com/api/product/{productId}`

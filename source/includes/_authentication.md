@@ -32,10 +32,10 @@ curl "https://carikotak.com/register"
 
 This endpoint to register new user
 
-### HTTP REQUEST
+#### HTTP REQUEST
 `POST http://carikotak.com/register`
 
-### PARAMETERS
+#### PARAMETERS
 Parameter |  | Description
 --------- | ------- | -----------
 name | required | User name
@@ -71,10 +71,10 @@ curl "https://carikotak.com/login"
 
 This endpoint to loggin to existing user account
 
-### HTTP REQUEST
+#### HTTP REQUEST
 `POST http://carikotak.com/login
 
-### PARAMETERS
+#### PARAMETERS
 Parameter |   | Description
 --------- | ------- | -----------
 email | required | User email address
@@ -106,10 +106,10 @@ curl "https://carikotak.com/oauth/token"
 
 This endpoint to get API token
 
-### HTTP REQUEST
+#### HTTP REQUEST
 `POST http://carikotak.com/oauth/token`
 
-### PARAMETERS
+#### PARAMETERS
 Parameter |  | Description
 --------- | ------- | -----------
 client_id | required | Oauth Client ID
@@ -147,11 +147,11 @@ curl "https://carikotak.com/social"
 
 This endpoint is used to authenticated with Facebook or Google Account
 
-### HTTP Request
+#### HTTP Request
 
 `POST https://carikotak.com/social`
 
-### Parameters
+#### Parameters
 
 Parameter |  | Description
 --------- | ------- | -----------
