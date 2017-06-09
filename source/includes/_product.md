@@ -7,12 +7,19 @@
 ```shell
 curl "https://carikotak.com/api/product"
   -X "GET"
+
+curl "https://carikotak.com/api/product?user=10"
+-X "GET"
+
+curl "https://carikotak.com/api/product?page=10&per_page=10"
+-X "GET"
+
 ```
 
 #### HTTP REQUEST
 - `GET https://carikotak.com/api/product`
 - `GET https://carikotak.com/api/product?user={userId}`
-- `GET https://carikotak.com/api/product?page=1&per_page=10`
+- `GET https://carikotak.com/api/product?page={int}&per_page={int}`
 
 #### QUERIES
 Query   | Type  | Description
