@@ -84,6 +84,9 @@ color | optional | Product color
 image | optional | Product image
 description | required | Product description
 type | required | Product type
+width | optional | Product Width
+length | optional | Product Length
+weight | optional | Product Weight
 
 ## Update Product
 

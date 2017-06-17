@@ -14,6 +14,7 @@ includes:
   - errors
   - product
   - post
+  - follow
   - user
 
 

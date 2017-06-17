@@ -38,6 +38,7 @@ This endpoint to register new user
 #### PARAMETERS
 Parameter |  | Description
 --------- | ------- | -----------
+usename | required | username for credential
 name | required | User name
 email | required | User email address
 password | required | User password
@@ -77,7 +78,7 @@ This endpoint to loggin to existing user account
 #### PARAMETERS
 Parameter |   | Description
 --------- | ------- | -----------
-email | required | User email address
+username | required | Can be username or email address
 password | required | User password
 
 ## Get API token
@@ -115,7 +116,7 @@ Parameter |  | Description
 client_id | required | Oauth Client ID
 client_secret | required | Oauth Client Secret
 grant_type | required | 'password'
-email | required | User email address
+username | required | Can be username or email address
 password | required | User password
 
 ## Social Auth
