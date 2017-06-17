@@ -83,10 +83,12 @@ material | optional | Product material
 color | optional | Product color
 image | optional | Product image
 description | required | Product description
-type | required | Product type
+type | required | 'jual' or 'cari'
+condition | required | 'new' or 'second'
 width | optional | Product Width
 length | optional | Product Length
 weight | optional | Product Weight
+height | optinoal \ product Height
 
 ## Update Product
 
