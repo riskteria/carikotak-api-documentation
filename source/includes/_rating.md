@@ -12,9 +12,9 @@ curl "https://carikotak.com/api/rating"
 #### HTTP REQUEST
 - `POST https://carikotak.com/api/rating`
 
-#### QUERIES
+#### PARAMETERS
 
-Query   | Type  | Description
+Parameter   | Type  | Description
 --------| ----- | -----------
 target_id   | required  | product or post id
 target_type | required  | 'product' or 'post' default 'product'
