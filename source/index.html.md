@@ -17,6 +17,8 @@ includes:
   - follow
   - user
   - rating
+  - favorite
+  - messaging
 
 
 search: true

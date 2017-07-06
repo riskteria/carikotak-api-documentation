@@ -1,5 +1,12 @@
 # User
 
-## Get All Users
+## Get User Info
 
-## Get a Specific User
+> Sample Request
+
+```shell
+curl "https://carikotak.com/api/user/historiareiss"
+  -X "GET"
+```
+
+#### HTTP REQUEST
