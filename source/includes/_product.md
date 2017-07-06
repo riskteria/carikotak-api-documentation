@@ -79,16 +79,16 @@ Parameter |  | Description
 name | required | Product name
 price | required | Product price
 category_id | required | Product Category
-material | optional | Product material
-color | optional | Product color
-image | optional | Product image
 description | required | Product description
 type | required | 'jual' or 'cari'
 condition | required | 'new' or 'second'
+material | optional | Product material
+color | optional | Product color
+image | optional | Product image (array)
 width | optional | Product Width
 length | optional | Product Length
 weight | optional | Product Weight
-height | optinoal \ product Height
+height | optinoal | product Height
 
 ## Update Product
 
