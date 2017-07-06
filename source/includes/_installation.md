@@ -12,7 +12,7 @@
 
 5. Copy `.env.example` file to `.env` and run `php artisan key:generate`
 
-6. Setup Voyager Admin Panel with `php artisan voyager:install`
+6. Setup Voyager Admin Panel with `php artisan migrate --seed`
 
 7. Setup Laravel Passport with `php artisan passport:install`
 

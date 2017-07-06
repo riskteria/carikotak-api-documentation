@@ -16,6 +16,7 @@ includes:
   - post
   - follow
   - user
+  - rating
 
 
 search: true

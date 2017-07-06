@@ -127,10 +127,10 @@ Parameter |  | Description
 name | required | Product name
 price | required | Product price
 category_id | required | Product Category
+description | required | Product description
 material | optional | Product material
 color | optional | Product color
 image | optional | Product image
-description | required | Product description
 type | required | Product type
 
 ## Remove Product
