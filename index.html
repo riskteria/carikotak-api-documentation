@@ -240,7 +240,7 @@
 <li><p>Inside the project folder run <code class="prettyprint">composer install</code></p></li>
 <li><p>Install package dependencies with <code class="prettyprint">yarn install</code> if you&rsquo;re using yarn or <code class="prettyprint">npm install</code> is you&rsquo;re using npm</p></li>
 <li><p>Copy <code class="prettyprint">.env.example</code> file to <code class="prettyprint">.env</code> and run <code class="prettyprint">php artisan key:generate</code></p></li>
-<li><p>Setup Voyager Admin Panel with <code class="prettyprint">php artisan voyager:install</code></p></li>
+<li><p>Setup Voyager Admin Panel with <code class="prettyprint">php artisan migrate --seed</code></p></li>
 <li><p>Setup Laravel Passport with <code class="prettyprint">php artisan passport:install</code></p></li>
 <li><p>Run your project with <code class="prettyprint">php artisan serve</code> then open <code class="prettyprint">localhost:8000</code> from your browser</p></li>
 </ol>
@@ -670,21 +670,6 @@ curl <span class="s2">"https://carikotak.com/api/product?page=10&amp;per_page=10
 <td>Product Category</td>
 </tr>
 <tr>
-<td>material</td>
-<td>optional</td>
-<td>Product material</td>
-</tr>
-<tr>
-<td>color</td>
-<td>optional</td>
-<td>Product color</td>
-</tr>
-<tr>
-<td>image</td>
-<td>optional</td>
-<td>Product image</td>
-</tr>
-<tr>
 <td>description</td>
 <td>required</td>
 <td>Product description</td>
@@ -698,6 +683,21 @@ curl <span class="s2">"https://carikotak.com/api/product?page=10&amp;per_page=10
 <td>condition</td>
 <td>required</td>
 <td>&lsquo;new&rsquo; or &lsquo;second&rsquo;</td>
+</tr>
+<tr>
+<td>material</td>
+<td>optional</td>
+<td>Product material</td>
+</tr>
+<tr>
+<td>color</td>
+<td>optional</td>
+<td>Product color</td>
+</tr>
+<tr>
+<td>image</td>
+<td>optional</td>
+<td>Product image (array)</td>
 </tr>
 <tr>
 <td>width</td>
@@ -716,8 +716,8 @@ curl <span class="s2">"https://carikotak.com/api/product?page=10&amp;per_page=10
 </tr>
 <tr>
 <td>height</td>
-<td>optinoal \ product Height</td>
-<td></td>
+<td>optinoal</td>
+<td>product Height</td>
 </tr>
 </tbody></table>
 
@@ -775,6 +775,11 @@ curl <span class="s2">"https://carikotak.com/api/product?page=10&amp;per_page=10
 <td>Product Category</td>
 </tr>
 <tr>
+<td>description</td>
+<td>required</td>
+<td>Product description</td>
+</tr>
+<tr>
 <td>material</td>
 <td>optional</td>
 <td>Product material</td>
@@ -788,11 +793,6 @@ curl <span class="s2">"https://carikotak.com/api/product?page=10&amp;per_page=10
 <td>image</td>
 <td>optional</td>
 <td>Product image</td>
-</tr>
-<tr>
-<td>description</td>
-<td>required</td>
-<td>Product description</td>
 </tr>
 <tr>
 <td>type</td>
@@ -1037,13 +1037,79 @@ curl <span class="s2">"https://carikotak.com/api/product?page=10&amp;per_page=10
 
 <h2 id="follow-user">Follow User</h2>
 
+<blockquote>
+<p>Sample Request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://carikotak.com/api/follow/15"</span>
+  -X <span class="s2">"PUT"</span>
+</code></pre>
+<h4 id="http-request">HTTP REQUEST</h4>
+
+<ul>
+<li><code class="prettyprint">PUT https://carikotak.com/api/follow/{target_user_id}</code></li>
+</ul>
+
 <h2 id="unfollow-user">Unfollow User</h2>
+
+<blockquote>
+<p>Sample Request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://carikotak.com/api/follow/15"</span>
+  -X <span class="s2">"DELETE"</span>
+</code></pre>
+<h4 id="http-request">HTTP REQUEST</h4>
+
+<ul>
+<li><code class="prettyprint">DELETE https://carikotak.com/api/follow/{target_user_id}</code></li>
+</ul>
 
           <h1 id="user">User</h1>
 
 <h2 id="get-all-users">Get All Users</h2>
 
 <h2 id="get-a-specific-user">Get a Specific User</h2>
+
+          <h1 id="rating">Rating</h1>
+
+<h2 id="give-rating-or-update-rating">Give Rating or Update Rating</h2>
+
+<blockquote>
+<p>Sample Request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://carikotak.com/api/rating"</span>
+  -X <span class="s2">"POST"</span>
+</code></pre>
+<h4 id="http-request">HTTP REQUEST</h4>
+
+<ul>
+<li><code class="prettyprint">POST https://carikotak.com/api/rating</code></li>
+</ul>
+
+<h4 id="queries">QUERIES</h4>
+
+<table><thead>
+<tr>
+<th>Query</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>target_id</td>
+<td>required</td>
+<td>product or post id</td>
+</tr>
+<tr>
+<td>target_type</td>
+<td>required</td>
+<td>&lsquo;product&rsquo; or &lsquo;post&rsquo; default &lsquo;product&rsquo;</td>
+</tr>
+<tr>
+<td>rating</td>
+<td>required</td>
+<td>rating float number 0 to 5</td>
+</tr>
+</tbody></table>
 
       </div>
       <div class="dark-box">
