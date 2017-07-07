@@ -5,14 +5,26 @@
 > Sample Request
 
 ```shell
+
+curl "https://carikotak.com/api/post"
+  -X "GET"
+
+curl "https://carikotak.com/api/post?user=23"
+  -X "GET"
+
 curl "https://carikotak.com/api/post?page=1&per_page=10"
   -X "GET"
+
+curl "https://carikotak.com/api/post?keyword=hello&page=1&per_page=10"
+  -X "GET"
+
 ```
 
 #### HTTP REQUEST
 - `GET https://carikotak.com/api/post`
-- `GET https://carikotak.com/api/post?user={userId}`
-- `GET https://carikotak.com/api/post?page=1&per_page=10`
+- `GET https://carikotak.com/api/post?user={user_id}`
+- `GET https://carikotak.com/api/post?page={page_number}&per_page={number_per_page}`
+- `GET https://carikotak.com/api/post?keyword={text}`
 
 #### QUERIES
 Query   | Type  | Description
@@ -20,6 +32,7 @@ Query   | Type  | Description
 user    | optional  | Get post list from user
 page    | optional  | Pagination page, default 0
 per_page | optional | Number of results per page, default 10
+keyword | optional  | Keyword used to search posts
 
 ## Read Post
 

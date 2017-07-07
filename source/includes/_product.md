@@ -5,6 +5,7 @@
 > Sample Request
 
 ```shell
+
 curl "https://carikotak.com/api/product"
   -X "GET"
 
@@ -14,12 +15,16 @@ curl "https://carikotak.com/api/product?user=10"
 curl "https://carikotak.com/api/product?page=10&per_page=10"
 -X "GET"
 
+curl "https://carikotak.com/api/product?keyword=hello&page=1&per_page=10"
+  -X "GET"
+
 ```
 
 #### HTTP REQUEST
 - `GET https://carikotak.com/api/product`
 - `GET https://carikotak.com/api/product?user={userId}`
 - `GET https://carikotak.com/api/product?page={int}&per_page={int}`
+- `GET https://carikotak.com/api/product?keyword={text}`
 
 #### QUERIES
 Query   | Type  | Description
@@ -27,6 +32,7 @@ Query   | Type  | Description
 user    | optional  | Get product list from user
 page    | optional  | Pagination page, default 0
 per_page | optional | Number of results per page, default 10
+keyword | optional  | Keyword used to search products
 
 
 ## Read Product
