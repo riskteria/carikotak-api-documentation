@@ -12,17 +12,29 @@ curl "https://carikotak.com/api/me"
 #### HTTP REQUEST
 - `GET https://carikotak.com/api/me`
 
-## Get Profile Favorites
+## Get Profile Favorite Posts
 
 > Sample Request
 
 ```shell
-curl "https://carikotak.com/api/me/favorites"
+curl "https://carikotak.com/api/me/favorite-posts"
   -X "GET"
 ```
 
 #### HTTP REQUEST
-- `GET https://carikotak.com/api/me/favorites`
+- `GET https://carikotak.com/api/me/favorite-posts
+
+## Get Profile Favorite Products
+
+> Sample Request
+
+```shell
+curl "https://carikotak.com/api/me/favorite-products"
+  -X "GET"
+```
+
+#### HTTP REQUEST
+- `GET https://carikotak.com/api/me/favorite-products`
 
 ## Get Profile Followings
 
