@@ -1219,18 +1219,32 @@ curl <span class="s2">"https://carikotak.com/api/product?page=10&amp;per_page=10
 <li><code class="prettyprint">GET https://carikotak.com/api/me</code></li>
 </ul>
 
-<h2 id="get-profile-favorites">Get Profile Favorites</h2>
+<h2 id="get-profile-favorite-posts">Get Profile Favorite Posts</h2>
 
 <blockquote>
 <p>Sample Request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://carikotak.com/api/me/favorites"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://carikotak.com/api/me/favorite-posts"</span>
   -X <span class="s2">"GET"</span>
 </code></pre>
 <h4 id="http-request">HTTP REQUEST</h4>
 
 <ul>
-<li><code class="prettyprint">GET https://carikotak.com/api/me/favorites</code></li>
+<li>`GET https://carikotak.com/api/me/favorite-posts</li>
+</ul>
+
+<h2 id="get-profile-favorite-products">Get Profile Favorite Products</h2>
+
+<blockquote>
+<p>Sample Request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://carikotak.com/api/me/favorite-products"</span>
+  -X <span class="s2">"GET"</span>
+</code></pre>
+<h4 id="http-request">HTTP REQUEST</h4>
+
+<ul>
+<li><code class="prettyprint">GET https://carikotak.com/api/me/favorite-products</code></li>
 </ul>
 
 <h2 id="get-profile-followings">Get Profile Followings</h2>
