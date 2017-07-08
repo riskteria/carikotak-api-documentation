@@ -1,5 +1,31 @@
 # Comment
 
+## Get Product Comment List
+
+> Sample Request
+
+```shell
+curl "https://carikotak.com/api/product/23/comment"
+  -X "GET"
+```
+
+#### HTTP REQUEST
+
+- `GET https://carikotak.com/api/product/{product_id}/comment`
+
+## Get Post Comment List
+
+> Sample Request
+
+```shell
+curl "https://carikotak.com/api/post/23/comment"
+  -X "GET"
+```
+
+#### HTTP REQUEST
+
+- `GET https://carikotak.com/api/post/{post_id}/comment`
+
 ## Comment on a Product
 
 > Sample Request
