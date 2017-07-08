@@ -1062,6 +1062,34 @@ curl <span class="s2">"https://carikotak.com/api/post?keyword=hello&amp;page=1&a
 
           <h1 id="comment">Comment</h1>
 
+<h2 id="get-product-comment-list">Get Product Comment List</h2>
+
+<blockquote>
+<p>Sample Request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://carikotak.com/api/product/23/comment"</span>
+  -X <span class="s2">"GET"</span>
+</code></pre>
+<h4 id="http-request">HTTP REQUEST</h4>
+
+<ul>
+<li><code class="prettyprint">GET https://carikotak.com/api/product/{product_id}/comment</code></li>
+</ul>
+
+<h2 id="get-post-comment-list">Get Post Comment List</h2>
+
+<blockquote>
+<p>Sample Request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://carikotak.com/api/post/23/comment"</span>
+  -X <span class="s2">"GET"</span>
+</code></pre>
+<h4 id="http-request">HTTP REQUEST</h4>
+
+<ul>
+<li><code class="prettyprint">GET https://carikotak.com/api/post/{post_id}/comment</code></li>
+</ul>
+
 <h2 id="comment-on-a-product">Comment on a Product</h2>
 
 <blockquote>
