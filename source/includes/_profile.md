@@ -74,6 +74,12 @@ curl "https://carikotak.com/api/me/change-password"
 
 #### PARAMETERS
 
+Parameter |  | Description
+--------- | ------- | -----------
+current_password  | required  | User Current Password
+new_password  | required  | User New Password
+confirm_password  | required  | Confirm User new password
+
 ## Update Profile Info
 
 > Sample Request
@@ -87,3 +93,10 @@ curl "https://carikotak.com/api/me/update-profile"
 - `PUT https://carikotak.com/api/me/update-profile`
 
 #### PARAMETERS
+Parameter |  | Description
+--------- | ------- | -----------
+name  | required  | user name
+email | required  | user email (must not have been used by anyone)
+description | optional  | user description
+city_id | optional  | city id must already exists in database or error (can be null)
+province_id | optional  | province id must already exists in database or error (can be null)
