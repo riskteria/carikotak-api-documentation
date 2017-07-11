@@ -1346,6 +1346,30 @@ curl <span class="s2">"https://carikotak.com/api/post?keyword=hello&amp;page=1&a
 
 <h4 id="parameters">PARAMETERS</h4>
 
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th></th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>current_password</td>
+<td>required</td>
+<td>User Current Password</td>
+</tr>
+<tr>
+<td>new_password</td>
+<td>required</td>
+<td>User New Password</td>
+</tr>
+<tr>
+<td>confirm_password</td>
+<td>required</td>
+<td>Confirm User new password</td>
+</tr>
+</tbody></table>
+
 <h2 id="update-profile-info">Update Profile Info</h2>
 
 <blockquote>
@@ -1361,6 +1385,40 @@ curl <span class="s2">"https://carikotak.com/api/post?keyword=hello&amp;page=1&a
 </ul>
 
 <h4 id="parameters">PARAMETERS</h4>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th></th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>name</td>
+<td>required</td>
+<td>user name</td>
+</tr>
+<tr>
+<td>email</td>
+<td>required</td>
+<td>user email (must not have been used by anyone)</td>
+</tr>
+<tr>
+<td>description</td>
+<td>optional</td>
+<td>user description</td>
+</tr>
+<tr>
+<td>city_id</td>
+<td>optional</td>
+<td>city id must already exists in database or error (can be null)</td>
+</tr>
+<tr>
+<td>province_id</td>
+<td>optional</td>
+<td>province id must already exists in database or error (can be null)</td>
+</tr>
+</tbody></table>
 
           <h1 id="rating">Rating</h1>
 
