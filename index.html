@@ -1221,13 +1221,13 @@ curl <span class="s2">"https://carikotak.com/api/post?keyword=hello&amp;page=1&a
 <blockquote>
 <p>Sample Request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://carikotak.com/api/historiareiss"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://carikotak.com/api/user/historiareiss"</span>
   -X <span class="s2">"GET"</span>
 </code></pre>
 <h4 id="http-request">HTTP REQUEST</h4>
 
 <ul>
-<li><code class="prettyprint">GET https://carikotak.com/api/me/{username}</code></li>
+<li><code class="prettyprint">GET https://carikotak.com/api/user/{username}</code></li>
 </ul>
 
 <h2 id="get-user-followers">Get User Followers</h2>
@@ -1235,13 +1235,13 @@ curl <span class="s2">"https://carikotak.com/api/post?keyword=hello&amp;page=1&a
 <blockquote>
 <p>Sample Request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://carikotak.com/api/historiareiss/followers"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://carikotak.com/api/user/historiareiss/follower"</span>
   -X <span class="s2">"GET"</span>
 </code></pre>
 <h4 id="http-request">HTTP REQUEST</h4>
 
 <ul>
-<li><code class="prettyprint">GET https://carikotak.com/api/me/{username}/followers</code></li>
+<li><code class="prettyprint">GET https://carikotak.com/api/me/{username}/follower</code></li>
 </ul>
 
 <h2 id="get-user-followings">Get User Followings</h2>
@@ -1249,13 +1249,41 @@ curl <span class="s2">"https://carikotak.com/api/post?keyword=hello&amp;page=1&a
 <blockquote>
 <p>Sample Request</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://carikotak.com/api/historiareiss/followings"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://carikotak.com/api/user/historiareiss/following"</span>
   -X <span class="s2">"GET"</span>
 </code></pre>
 <h4 id="http-request">HTTP REQUEST</h4>
 
 <ul>
-<li><code class="prettyprint">GET https://carikotak.com/api/{username}/followings</code></li>
+<li><code class="prettyprint">GET https://carikotak.com/api/user/{username}/following</code></li>
+</ul>
+
+<h2 id="get-user-product-comments">Get User Product Comments</h2>
+
+<blockquote>
+<p>Sample Request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://carikotak.com/api/user/historiareiss/comment-product"</span>
+  -X <span class="s2">"GET"</span>
+</code></pre>
+<h4 id="http-request">HTTP REQUEST</h4>
+
+<ul>
+<li><code class="prettyprint">GET https://carikotak.com/api/user/{username}/comment-product</code></li>
+</ul>
+
+<h2 id="get-user-post-comments">Get User Post Comments</h2>
+
+<blockquote>
+<p>Sample Request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://carikotak.com/api/user/historiareiss/comment-post"</span>
+  -X <span class="s2">"GET"</span>
+</code></pre>
+<h4 id="http-request">HTTP REQUEST</h4>
+
+<ul>
+<li><code class="prettyprint">GET https://carikotak.com/api/user/{username}/comment-post</code></li>
 </ul>
 
           <h1 id="profile">Profile</h1>
