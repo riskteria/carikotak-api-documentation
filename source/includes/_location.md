@@ -11,7 +11,7 @@ curl "https://carikotak.com/api/location?get=provinces"
 
 ```
 
-#HTTP REQUEST
+#### HTTP REQUEST
 - `GET https://carikotak.com/api/location?get=provinces`
 
 ## Get All Cities
@@ -25,11 +25,8 @@ curl "https://carikotak.com/api/location?get=cities"
 
 ```
 
-#HTTP REQUEST
+#### HTTP REQUEST
 - `GET https://carikotak.com/api/location?get=cities`
-
-#HTTP REQUEST
-- ``
 
 ## Get All Cities from a Province
 
@@ -42,7 +39,7 @@ curl "https://carikotak.com/api/location?get=cities&from=11"
 
 ```
 
-#HTTP REQUEST
+#### HTTP REQUEST
 - `GET https://carikotak.com/api/location?get=cities&from={province_id}`
 
 ## Get All Cities from all Provinces
@@ -56,5 +53,5 @@ curl "https://carikotak.com/api/location?get=provinces&with=cities"
 
 ```
 
-#HTTP REQUEST
+#### HTTP REQUEST
 - `GET https://carikotak.com/api/location?get=provinces&with=cities`
