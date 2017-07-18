@@ -1821,6 +1821,78 @@ IF channel already exist, then return existing channel</p>
 <li><code class="prettyprint">DELETE https://carikotak.com/message/{message_id}</code></li>
 </ul>
 
+          <h1 id="location">Location</h1>
+
+<h2 id="get-all-provinces">Get All Provinces</h2>
+
+<blockquote>
+<p>Sample Request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>
+curl <span class="s2">"https://carikotak.com/api/location?get=provinces"</span>
+  -X <span class="s2">"GET"</span>
+
+</code></pre>
+<h1 id="http-request">HTTP REQUEST</h1>
+
+<ul>
+<li><code class="prettyprint">GET https://carikotak.com/api/location?get=provinces</code></li>
+</ul>
+
+<h2 id="get-all-cities">Get All Cities</h2>
+
+<blockquote>
+<p>Sample Request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>
+curl <span class="s2">"https://carikotak.com/api/location?get=cities"</span>
+  -X <span class="s2">"GET"</span>
+
+</code></pre>
+<h1 id="http-request">HTTP REQUEST</h1>
+
+<ul>
+<li><code class="prettyprint">GET https://carikotak.com/api/location?get=cities</code></li>
+</ul>
+
+<h1 id="http-request">HTTP REQUEST</h1>
+
+<ul>
+<li>&ldquo;</li>
+</ul>
+
+<h2 id="get-all-cities-from-a-province">Get All Cities from a Province</h2>
+
+<blockquote>
+<p>Sample Request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>
+curl <span class="s2">"https://carikotak.com/api/location?get=cities&amp;from=11"</span>
+  -X <span class="s2">"GET"</span>
+
+</code></pre>
+<h1 id="http-request">HTTP REQUEST</h1>
+
+<ul>
+<li><code class="prettyprint">GET https://carikotak.com/api/location?get=cities&amp;from={province_id}</code></li>
+</ul>
+
+<h2 id="get-all-cities-from-all-provinces">Get All Cities from all Provinces</h2>
+
+<blockquote>
+<p>Sample Request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>
+curl <span class="s2">"https://carikotak.com/api/location?get=provinces&amp;with=cities"</span>
+  -X <span class="s2">"GET"</span>
+
+</code></pre>
+<h1 id="http-request">HTTP REQUEST</h1>
+
+<ul>
+<li><code class="prettyprint">GET https://carikotak.com/api/location?get=provinces&amp;with=cities</code></li>
+</ul>
+
       </div>
       <div class="dark-box">
           <div class="lang-selector">
