@@ -21,6 +21,7 @@ includes:
   - rating
   - favorite
   - messaging
+  - location
 
 
 search: true
