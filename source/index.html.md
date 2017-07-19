@@ -22,6 +22,7 @@ includes:
   - favorite
   - messaging
   - location
+  - notification
 
 
 search: true
