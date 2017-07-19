@@ -64,7 +64,7 @@ Remove User From Channel
 - `DELETE https://carikotak.com/channel/{channel_id}`
 
 
-## Create Message
+## Send Message
 
 > Sample Request
 
@@ -76,7 +76,7 @@ curl "https://carikotak.com/api/message"
 Send Message in Joined Channel
 
 #### HTTP REQUEST
-- `POST https://carikotak.com/channel`
+- `POST https://carikotak.com/api/message`
 
 #### PARAMETERS
 Parameter | Type  | Description
