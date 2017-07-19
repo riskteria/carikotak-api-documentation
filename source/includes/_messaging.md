@@ -81,7 +81,7 @@ Send Message in Joined Channel
 #### PARAMETERS
 Parameter | Type  | Description
 --------| ----- | -----------
-channel_id  | required  | Channel id user joined
+user_id  | required  | id of recepient user
 message | required  | Message text
 
 ## Delete Message
