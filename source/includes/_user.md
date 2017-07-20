@@ -22,7 +22,7 @@ curl "https://carikotak.com/api/user/historiareiss/follower"
 ```
 
 #### HTTP REQUEST
-- `GET https://carikotak.com/api/me/{username}/follower`
+- `GET https://carikotak.com/api/user/{username}/follower`
 
 ## Get User Followings
 
