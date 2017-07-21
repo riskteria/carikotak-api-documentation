@@ -23,6 +23,7 @@ includes:
   - messaging
   - location
   - notification
+  - material
 
 
 search: true
