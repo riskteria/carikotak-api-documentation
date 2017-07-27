@@ -24,6 +24,8 @@ includes:
   - location
   - notification
   - material
+  - report
+  - category
 
 
 search: true
