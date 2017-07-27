@@ -1989,6 +1989,187 @@ curl <span class="s2">"https://carikotak.com/api/notification/total"</span>
 <li><code class="prettyprint">GET https://carikotak.com/api/material/{material_id}</code></li>
 </ul>
 
+          <h1 id="report">Report</h1>
+
+<h2 id="report-an-user">Report an User</h2>
+
+<blockquote>
+<p>Sample Request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://carikotak.com/api/report"</span>
+  -X <span class="s2">"POST"</span>
+</code></pre>
+<h4 id="http-request">HTTP REQUEST</h4>
+
+<ul>
+<li><code class="prettyprint">POST https://carikotak.com/api/report</code></li>
+</ul>
+
+<h4 id="parameters">PARAMETERS</h4>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th></th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>target_id</td>
+<td>required</td>
+<td>target ID</td>
+</tr>
+<tr>
+<td>target_type</td>
+<td>required</td>
+<td>&lsquo;user&rsquo;</td>
+</tr>
+<tr>
+<td>title</td>
+<td>required</td>
+<td>report title</td>
+</tr>
+<tr>
+<td>body</td>
+<td>required</td>
+<td>report body</td>
+</tr>
+</tbody></table>
+
+<h2 id="report-a-product">Report a Product</h2>
+
+<blockquote>
+<p>Sample Request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://carikotak.com/api/report"</span>
+  -X <span class="s2">"POST"</span>
+</code></pre>
+<h4 id="http-request">HTTP REQUEST</h4>
+
+<ul>
+<li><code class="prettyprint">POST https://carikotak.com/api/report</code></li>
+</ul>
+
+<h4 id="parameters">PARAMETERS</h4>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th></th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>target_id</td>
+<td>required</td>
+<td>target ID</td>
+</tr>
+<tr>
+<td>target_type</td>
+<td>required</td>
+<td>&lsquo;product&rsquo;</td>
+</tr>
+<tr>
+<td>title</td>
+<td>required</td>
+<td>report title</td>
+</tr>
+<tr>
+<td>body</td>
+<td>required</td>
+<td>report body</td>
+</tr>
+</tbody></table>
+
+<h2 id="report-a-post">Report a Post</h2>
+
+<blockquote>
+<p>Sample Request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://carikotak.com/api/report"</span>
+  -X <span class="s2">"POST"</span>
+</code></pre>
+<h4 id="http-request">HTTP REQUEST</h4>
+
+<ul>
+<li><code class="prettyprint">POST https://carikotak.com/api/report</code></li>
+</ul>
+
+<h4 id="parameters">PARAMETERS</h4>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th></th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>target_id</td>
+<td>required</td>
+<td>target ID</td>
+</tr>
+<tr>
+<td>target_type</td>
+<td>required</td>
+<td>&lsquo;post&rsquo;</td>
+</tr>
+<tr>
+<td>title</td>
+<td>required</td>
+<td>report title</td>
+</tr>
+<tr>
+<td>body</td>
+<td>required</td>
+<td>report body</td>
+</tr>
+</tbody></table>
+
+          <h1 id="category">Category</h1>
+
+<h2 id="get-all-categories">Get All categories</h2>
+
+<blockquote>
+<p>Sample Request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://carikotak.com/api/category"</span>
+  -X <span class="s2">"GET"</span>
+</code></pre>
+<h4 id="http-request">HTTP REQUEST</h4>
+
+<ul>
+<li><code class="prettyprint">GET https://carikotak.com/api/category</code></li>
+</ul>
+
+<h2 id="get-all-categories-with-products">Get All Categories with Products</h2>
+
+<blockquote>
+<p>Sample Request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://carikotak.com/api/category?with=product"</span>
+  -X <span class="s2">"GET"</span>
+</code></pre>
+<h4 id="http-request">HTTP REQUEST</h4>
+
+<ul>
+<li><code class="prettyprint">GET https://carikotak.com/api/category?with=product</code></li>
+</ul>
+
+<h2 id="get-all-categories-with-stories">Get All Categories with Stories</h2>
+
+<blockquote>
+<p>Sample Request</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://carikotak.com/api/category?with=post"</span>
+  -X <span class="s2">"GET"</span>
+</code></pre>
+<h4 id="http-request">HTTP REQUEST</h4>
+
+<ul>
+<li>`GET https://carikotak.com/api/category?with=post</li>
+</ul>
+
       </div>
       <div class="dark-box">
           <div class="lang-selector">
