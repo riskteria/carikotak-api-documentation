@@ -82,7 +82,7 @@ Send Message in Joined Channel
 Parameter | Type  | Description
 --------| ----- | -----------
 user_id  | required  | id of recepient user
-message | required  | Message text
+text | required  | Message text
 
 ## Delete Message
 
