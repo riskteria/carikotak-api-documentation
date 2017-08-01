@@ -12,6 +12,15 @@ curl "https://carikotak.com/api/product"
 curl "https://carikotak.com/api/product?user=10"
 -X "GET"
 
+curl "https://carikotak.com/api/product?category=5"
+-X "GET"
+
+curl "https://carikotak.com/api/product?material=7"
+-X "GET"
+
+curl "https://carikotak.com/api/product?condition=new"
+-X "GET"
+
 curl "https://carikotak.com/api/product?page=10&per_page=10"
 -X "GET"
 
@@ -25,6 +34,9 @@ curl "https://carikotak.com/api/product?keyword=hello&page=1&per_page=10"
 - `GET https://carikotak.com/api/product?user={userId}`
 - `GET https://carikotak.com/api/product?page={int}&per_page={int}`
 - `GET https://carikotak.com/api/product?keyword={text}`
+- `GET https://carikotak.com/api/product?category={category_id}`
+- `GET https://carikotak.com/api/product?material={material_id}`
+- `GET https://carikotak.com/api/product?condition={condition_type}`
 
 #### QUERIES
 Query   | Type  | Description
@@ -33,6 +45,9 @@ user    | optional  | Get product list from user
 page    | optional  | Pagination page, default 0
 per_page | optional | Number of results per page, default 10
 keyword | optional  | Keyword used to search products
+category | optional | Product category ID
+material | optional | Product material ID
+condition | optional | Condition type, 'new' or 'second'
 
 
 ## Read Product
