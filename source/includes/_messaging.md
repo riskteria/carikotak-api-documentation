@@ -27,6 +27,11 @@ Get All Message From a Channel User Joined
 
 #### HTTP REQUEST
 - `GET https://carikotak.com/channel/{channel_id}`
+- `GET https://carikotak.com/channel/{channel_id}?order={order_type}`
+
+Query   | Type  | Description
+--------| ----- | -----------
+order | optional  | message order type, can be 'asc' or 'desc'. default 'desc'
 
 ## Create Channel
 
