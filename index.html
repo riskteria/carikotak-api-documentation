@@ -1761,7 +1761,22 @@ curl <span class="s2">"https://carikotak.com/api/favorite/20?type=post"</span>
 
 <ul>
 <li><code class="prettyprint">GET https://carikotak.com/channel/{channel_id}</code></li>
+<li><code class="prettyprint">GET https://carikotak.com/channel/{channel_id}?order={order_type}</code></li>
 </ul>
+
+<table><thead>
+<tr>
+<th>Query</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>order</td>
+<td>optional</td>
+<td>message order type, can be &lsquo;asc&rsquo; or &lsquo;desc&rsquo;. default &lsquo;desc&rsquo;</td>
+</tr>
+</tbody></table>
 
 <h2 id="create-channel">Create Channel</h2>
 
