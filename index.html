@@ -576,11 +576,20 @@ curl <span class="s2">"https://carikotak.com/api/product?material=7"</span>
 curl <span class="s2">"https://carikotak.com/api/product?condition=new"</span>
 -X <span class="s2">"GET"</span>
 
+curl <span class="s2">"https://carikotak.com/api/product?province=123"</span>
+-X <span class="s2">"GET"</span>
+
+curl <span class="s2">"https://carikotak.com/api/product?city=20"</span>
+-X <span class="s2">"GET"</span>
+
 curl <span class="s2">"https://carikotak.com/api/product?page=10&amp;per_page=10"</span>
 -X <span class="s2">"GET"</span>
 
 curl <span class="s2">"https://carikotak.com/api/product?keyword=hello&amp;page=1&amp;per_page=10"</span>
   -X <span class="s2">"GET"</span>
+
+curl <span class="s2">"https://carikotak.com/api/product?province=10&amp;city=54&amp;user=21&amp;keyword=kotak&amp;material=3&amp;page=1&amp;per_page=20"</span>
+-X <span class="s2">"GET"</span>
 
 </code></pre>
 <h4 id="http-request">HTTP REQUEST</h4>
@@ -593,6 +602,9 @@ curl <span class="s2">"https://carikotak.com/api/product?keyword=hello&amp;page=
 <li><code class="prettyprint">GET https://carikotak.com/api/product?category={category_id}</code></li>
 <li><code class="prettyprint">GET https://carikotak.com/api/product?material={material_id}</code></li>
 <li><code class="prettyprint">GET https://carikotak.com/api/product?condition={condition_type}</code></li>
+<li><code class="prettyprint">GET https://carikotak.com/api/product?province={province_id}</code></li>
+<li><p><code class="prettyprint">GET https://carikotak.com/api/product?city={city_id}</code></p></li>
+<li><p><code class="prettyprint">GET https://carikotak.com/api/product?province={province_id}&amp;city={city_id}&amp;user={user_id}&amp;keyword={text}&amp;material={material_id}&amp;page={int}&amp;per_page={int}</code></p></li>
 </ul>
 
 <h4 id="queries">QUERIES</h4>
@@ -638,6 +650,16 @@ curl <span class="s2">"https://carikotak.com/api/product?keyword=hello&amp;page=
 <td>condition</td>
 <td>optional</td>
 <td>Condition type, &lsquo;new&rsquo; or &lsquo;second&rsquo;</td>
+</tr>
+<tr>
+<td>province</td>
+<td>optional</td>
+<td>Product user province ID</td>
+</tr>
+<tr>
+<td>city</td>
+<td>optional</td>
+<td>Product user city ID</td>
 </tr>
 </tbody></table>
 
