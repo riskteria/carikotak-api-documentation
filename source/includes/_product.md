@@ -21,11 +21,20 @@ curl "https://carikotak.com/api/product?material=7"
 curl "https://carikotak.com/api/product?condition=new"
 -X "GET"
 
+curl "https://carikotak.com/api/product?province=123"
+-X "GET"
+
+curl "https://carikotak.com/api/product?city=20"
+-X "GET"
+
 curl "https://carikotak.com/api/product?page=10&per_page=10"
 -X "GET"
 
 curl "https://carikotak.com/api/product?keyword=hello&page=1&per_page=10"
   -X "GET"
+
+curl "https://carikotak.com/api/product?province=10&city=54&user=21&keyword=kotak&material=3&page=1&per_page=20"
+-X "GET"
 
 ```
 
@@ -37,6 +46,10 @@ curl "https://carikotak.com/api/product?keyword=hello&page=1&per_page=10"
 - `GET https://carikotak.com/api/product?category={category_id}`
 - `GET https://carikotak.com/api/product?material={material_id}`
 - `GET https://carikotak.com/api/product?condition={condition_type}`
+- `GET https://carikotak.com/api/product?province={province_id}`
+- `GET https://carikotak.com/api/product?city={city_id}`
+
+- `GET https://carikotak.com/api/product?province={province_id}&city={city_id}&user={user_id}&keyword={text}&material={material_id}&page={int}&per_page={int}`
 
 #### QUERIES
 Query   | Type  | Description
@@ -48,6 +61,8 @@ keyword | optional  | Keyword used to search products
 category | optional | Product category ID
 material | optional | Product material ID
 condition | optional | Condition type, 'new' or 'second'
+province | optional | Product user province ID
+city | optional | Product user city ID
 
 
 ## Read Product
