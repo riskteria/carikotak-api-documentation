@@ -118,7 +118,7 @@ category_id | required | Product Category
 description | required | Product description
 type | required | 'jual' or 'cari'
 condition | required | 'new' or 'second'
-material | optional | Product material
+material_id | optional | Product material
 color | optional | Product color
 image | optional | Product image (array)
 width | optional | Product Width
@@ -164,7 +164,7 @@ name | required | Product name
 price | required | Product price
 category_id | required | Product Category
 description | required | Product description
-material | optional | Product material
+material_id | optional | Product material
 color | optional | Product color
 image | optional | Product image
 type | required | Product type
